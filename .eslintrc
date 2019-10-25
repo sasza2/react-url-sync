@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
+  "parser": "babel-eslint"
+}
