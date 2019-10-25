@@ -25,6 +25,7 @@
     "react": "16.8.6"
   },
   "peerDependencies": {
-    "react": ">=16.8.6"
+    "react": ">=16.8.6",
+    "react-router-dom": "^5.1.0"
   }
 }
