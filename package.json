@@ -1,5 +1,5 @@
 {
-  "name": "react-url-hook",
+  "name": "react-url-sync",
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
@@ -25,6 +25,7 @@
     "react": "16.8.6"
   },
   "peerDependencies": {
+    "prop-types": "^15.0.0",
     "react": ">=16.8.6",
     "react-router-dom": "^5.1.0"
   }
