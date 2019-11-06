@@ -1,5 +1,6 @@
 import { useCallback, useContext, useMemo } from 'react'
-import { useHistory, useLocation } from 'react-router'
+import { useLocation } from 'react-router'
+import { useHistory } from 'react-router-dom'
 import queryString from 'query-string'
 import Factory from 'type-casting'
 

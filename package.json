@@ -1,6 +1,6 @@
 {
   "name": "react-url-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React library for handling data in query param with specified types.",
   "keywords": [
     "query",
@@ -30,11 +30,14 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0",
-    "react-router": "^5.1.2"
+    "react": ">=16.8.6",
+    "react-router": ">=5.1.2",
+    "react-router-dom": ">=5.1.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.0.0",
+    "prop-types": ">=15.0.0",
     "react": ">=16.8.6",
-    "react-router": "^5.1.2"
+    "react-router": ">=5.1.2",
+    "react-router-dom": ">=5.1.2"
   }
 }
