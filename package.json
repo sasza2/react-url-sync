@@ -1,7 +1,15 @@
 {
   "name": "react-url-sync",
   "version": "1.0.0",
-  "description": "",
+  "description": "React library for handling data in query param with specified types.",
+  "keywords": [
+    "query",
+    "react",
+    "param",
+    "search",
+    "data",
+    "type"
+  ],
   "main": "dist/main.js",
   "scripts": {
     "build": "webpack --mode=production",

@@ -89,7 +89,7 @@ console.log(values)
 ```jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
-import UrlSyncProvider, { Type, useUrlSync } from 'react-url-sync'
+import UrlSync, { Type, useUrlSync } from 'react-url-sync'
 
 import './App.css'
 
@@ -113,7 +113,7 @@ const Input = () => {
 }
 
 const App = () => (
-  <UrlSyncProvider
+  <UrlSync
     answers={Type.Array(Type.Int).options({required: true })}
     other={Type.String({ default: 'ddd' })}
   >
@@ -124,7 +124,7 @@ const App = () => (
       <Checkbox id={3} label='ccc' />
       <Input />
     </div>
-  </UrlSyncProvider>
+  </UrlSync>
 )
 
 export default App
