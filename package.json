@@ -7,11 +7,10 @@
     "build": "webpack --mode=production",
     "lint": "eslint src --fix"
   },
-  "author": "",
+  "author": "sasza",
   "license": "MIT",
   "dependencies": {
-    "arrows-svg": "^1.0.5",
-    "lodash": "^4.17.15",
+    "query-string": "^6.8.3",
     "type-casting": "^1.0.2"
   },
   "devDependencies": {
@@ -23,11 +22,11 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0",
-    "react": "16.8.6"
+    "react-router": "^5.1.2"
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
     "react": ">=16.8.6",
-    "react-router-dom": "^5.1.0"
+    "react-router": "^5.1.2"
   }
 }
