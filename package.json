@@ -1,6 +1,6 @@
 {
   "name": "react-url-sync",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React library for handling data in query param with specified types.",
   "keywords": [
     "query",
@@ -15,8 +15,15 @@
     "build": "webpack --mode=production",
     "lint": "eslint src --fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasza2/react-url-sync.git"
+  },
   "author": "sasza",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sasza2/react-url-sync/issues"
+  },
   "dependencies": {
     "query-string": "^6.8.3",
     "type-casting": "^1.0.2"

@@ -1,7 +1,7 @@
 # react-url-sync
 React library for handling data in query param with specified types.
 
-!["Preview"](docs/preview.gif?raw=true "Example preview")
+!["Preview"](docs/preview.gif "Example preview")
 
 # Installation
 
