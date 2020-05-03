@@ -7,6 +7,9 @@ module.exports = {
     filename: 'main.js',
     libraryTarget: 'commonjs2',
   },
+  node: {
+    global: false
+  },
   module: {
     rules: [
       {
@@ -21,12 +24,6 @@ module.exports = {
   externals: {
     react: {
       commonjs2: "react"
-    },
-    "react-router": {
-      commonjs2: "react-router"
-    },
-    "react-router-dom": {
-      commonjs2: "react-router-dom"
     }
   }
 };
