@@ -1,3 +1,2 @@
-export { default } from './UrlSyncProvider'
-export { default as useUrlSync } from './useUrlSync'
+export { default, parse } from './UrlSync'
 export { Type } from 'type-casting'
