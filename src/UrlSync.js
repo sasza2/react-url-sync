@@ -2,7 +2,11 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import queryString from 'query-string'
 import Factory from 'type-casting'
 
-export const parse = (params) => queryString.parse(params, { arrayFormat: 'comma' })
+const QUERY_PARSER_OPTIONS = { arrayFormat: 'comma' }
+
+export const parse = (params) => queryString.parse(params, QUERY_PARSER_OPTIONS)
+
+export const stringify = (params) => queryString.stringify(params, QUERY_PARSER_OPTIONS)
 
 const useUrlSync = (
   {
@@ -34,15 +38,18 @@ const useUrlSync = (
       return
     }
 
+    // Order of keys will be same
+    const compareObjects = (a, b) => JSON.stringify(a) === JSON.stringify(b)
+
     if (onUpdate) {
-      const params = cast(onUpdate())
-      setCurrentParams(params)
+      const nextParams = cast(onUpdate())
+      if (!compareObjects(currentParams, nextParams)) setCurrentParams(nextParams)
     }
   }, dependencies)
 
   useEffect(() => {
     if (!currentParams) return
-    onHistoryReplace(queryString.stringify(currentParams, { arrayFormat: 'comma' }))
+    onHistoryReplace(stringify(currentParams))
   }, [currentParams])
 
   return currentParams
