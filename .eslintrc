@@ -3,6 +3,10 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "globals": {
+    "expect": false,
+    "test": false
+  },
   "settings": {
     "react": {
       "version": "latest"
