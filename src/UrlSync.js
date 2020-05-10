@@ -4,7 +4,11 @@ import Factory from 'type-casting'
 
 const QUERY_PARSER_OPTIONS = { arrayFormat: 'comma' }
 
-export const parse = (params) => queryString.parse(params, QUERY_PARSER_OPTIONS)
+export const parse = (params, types) => {
+  if (typeof params === 'string') return parse(queryString.parse(params, QUERY_PARSER_OPTIONS), types)
+  if (!types) return params
+  return Factory(types).cast(params)
+}
 
 export const stringify = (params) => queryString.stringify(params, QUERY_PARSER_OPTIONS)
 
@@ -21,11 +25,7 @@ const useUrlSync = (
 
   const isInitialEffect = useRef(true)
 
-  const cast = useCallback((nextParams) => {
-    if (typeof nextParams === 'string') return cast(parse(nextParams))
-    if (!types) return nextParams
-    return Factory(types).cast(nextParams)
-  }, [types])
+  const cast = useCallback((nextParams) => parse(nextParams, types), [types])
 
   const [currentParams, setCurrentParams] = useState(() => {
     if (!onUpdate) return {}
