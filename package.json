@@ -1,6 +1,6 @@
 {
   "name": "react-url-sync",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "React library for handling data in query param with specified types.",
   "keywords": [
     "query",
